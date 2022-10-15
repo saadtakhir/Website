@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hamroh Taxi</title>
+
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+</head>
+
+<body>
+
+    <main>
+        <nav class="navbar navbar-expand-lg py-3 mb-5 shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="/">HamrohTaxi</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse  justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav text-center fw-semibold">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./index.html"><i
+                                    class="fa fa-home me-1"></i>Asosiy
+                                sahifa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-envelope me-1"></i>Xabarlar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-info-circle me-1"></i>Biz haqimizda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary bg-gradient"><i class="fa fa-sign-in me-2"></i>Kirish</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="elonlar  d-flex flex-column align-items-start gap-2 gap-sm-2 my-4 my-sm-5 px-5">
+
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active fw-semibold" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true">Toshkent</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false">Xorazm</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="pills-contact-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        aria-selected="false">Andijon</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="pills-disabled-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled"
+                        aria-selected="false">Disabled</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                    tabindex="0">
+
+                    <div id="myBtnContainer-ads">
+                        <button class="btn-ads active" onclick="filterSelection('all')">Toshkent</button>
+                        <button class="btn-ads" onclick="filterSelection('cars')">Chilonzor</button>
+                        <button class="btn-ads" onclick="filterSelection('animals')">Sergeli</button>
+                        <button class="btn-ads" onclick="filterSelection('fruits')">Uchtepa</button>
+                    </div>
+
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-center" style="--bs-gap: .25rem 1rem;">
+                            <div
+                            class="filterDiv-ads cars flex-column align-items-end justify-content-center px-4 py-4 rounded bg-light shadow mx-3">
+                                <div class="d-flex justify-content-start w-100">
+                                    <div class="d-flex flex-column gap-3 px-3 py-4">
+
+                                        <div class="d-flex flex-row justify-content-start align-items-center">
+                                            <i class="fa fa-user"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Ismi:</p>
+                                                <p class="attendant-value my-0">Doniyor</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-location-arrow"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Jo'nalish:</p>
+                                                <p class="attendant-value my-0">Gurlan - Urganch</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-clock"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Ketish vaqti:</p>
+                                                <p class="attendant-value my-0">8:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-users"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Hamrohlar soni:</p>
+                                                <p class="attendant-value my-0">3 ta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-map-marker"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Mahallla:</p>
+                                                <p class="attendant-value my-0">Botirlar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <a href="#" role="button" class="btn btn-primary fw-semibold">Hamroh bo'lish</a>
+                            </div>
+                            <div
+                                class="filterDiv-ads animals flex-column align-items-end justify-content-center px-4 py-4 rounded bg-light shadow mx-3">
+
+                                <div class="d-flex justify-content-start w-100">
+                                    <div class="d-flex flex-column gap-3 px-3 py-4">
+
+                                        <div class="d-flex flex-row justify-content-start align-items-center">
+                                            <i class="fa fa-user"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Ismi:</p>
+                                                <p class="attendant-value my-0">Doniyor</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-location-arrow"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Jo'nalish:</p>
+                                                <p class="attendant-value my-0">Gurlan - Urganch</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-clock"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Ketish vaqti:</p>
+                                                <p class="attendant-value my-0">8:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-users"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Hamrohlar soni:</p>
+                                                <p class="attendant-value my-0">3 ta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-map-marker"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Mahallla:</p>
+                                                <p class="attendant-value my-0">Botirlar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="#" role="button" class="btn btn-primary fw-semibold">Hamroh bo'lish</a>
+                            </div>
+                            <div
+                                class="filterDiv-ads cars flex-column align-items-end justify-content-center px-4 py-4 rounded bg-light shadow mx-3">
+
+                                <div class="d-flex justify-content-start w-100">
+                                    <div class="d-flex flex-column gap-3 px-3 py-4">
+
+                                        <div class="d-flex flex-row justify-content-start align-items-center">
+                                            <i class="fa fa-user"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Ismi:</p>
+                                                <p class="attendant-value my-0">Doniyor</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-location-arrow"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Jo'nalish:</p>
+                                                <p class="attendant-value my-0">Gurlan - Urganch</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-clock"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Ketish vaqti:</p>
+                                                <p class="attendant-value my-0">8:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-users"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Hamrohlar soni:</p>
+                                                <p class="attendant-value my-0">3 ta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-map-marker"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Mahallla:</p>
+                                                <p class="attendant-value my-0">Botirlar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="#" role="button" class="btn btn-primary fw-semibold">Hamroh bo'lish</a>
+                            </div>
+                            <div
+                                class="filterDiv-ads fruits flex-column align-items-end justify-content-center px-4 py-4 rounded bg-light shadow mx-3">
+
+                                <div class="d-flex justify-content-start w-100">
+                                    <div class="d-flex flex-column gap-3 px-3 py-4">
+
+                                        <div class="d-flex flex-row justify-content-start align-items-center">
+                                            <i class="fa fa-user"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Ismi:</p>
+                                                <p class="attendant-value my-0">Doniyor</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-location-arrow"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Jo'nalish:</p>
+                                                <p class="attendant-value my-0">Gurlan - Urganch</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-clock"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Ketish vaqti:</p>
+                                                <p class="attendant-value my-0">8:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-users"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Hamrohlar soni:</p>
+                                                <p class="attendant-value my-0">3 ta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-map-marker"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Mahallla:</p>
+                                                <p class="attendant-value my-0">Botirlar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="#" role="button" class="btn btn-primary fw-semibold">Hamroh bo'lish</a>
+                            </div>
+                            <div
+                                class="filterDiv-ads animals flex-column align-items-end justify-content-center px-4 py-4 rounded bg-light shadow mx-3">
+
+                                <div class="d-flex justify-content-start w-100">
+                                    <div class="d-flex flex-column gap-3 px-3 py-4">
+
+                                        <div class="d-flex flex-row justify-content-start align-items-center">
+                                            <i class="fa fa-user"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Ismi:</p>
+                                                <p class="attendant-value my-0">Doniyor</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-location-arrow"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Jo'nalish:</p>
+                                                <p class="attendant-value my-0">Gurlan - Urganch</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-clock"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Ketish vaqti:</p>
+                                                <p class="attendant-value my-0">8:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-users"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Hamrohlar soni:</p>
+                                                <p class="attendant-value my-0">3 ta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-map-marker"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Mahallla:</p>
+                                                <p class="attendant-value my-0">Botirlar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="#" role="button" class="btn btn-primary fw-semibold">Hamroh bo'lish</a>
+                            </div>
+                            <div
+                                class="filterDiv-ads fruits flex-column align-items-end justify-content-center px-4 py-4 rounded bg-light shadow mx-3">
+
+                                <div class="d-flex justify-content-start w-100">
+                                    <div class="d-flex flex-column gap-3 px-3 py-4">
+
+                                        <div class="d-flex flex-row justify-content-start align-items-center">
+                                            <i class="fa fa-user"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Ismi:</p>
+                                                <p class="attendant-value my-0">Doniyor</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-location-arrow"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Jo'nalish:</p>
+                                                <p class="attendant-value my-0">Gurlan - Urganch</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-clock"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Ketish vaqti:</p>
+                                                <p class="attendant-value my-0">8:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-users"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Hamrohlar soni:</p>
+                                                <p class="attendant-value my-0">3 ta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center justify-content-start">
+                                            <i class="fa fa-map-marker"></i>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="fw-bold mx-2 my-0">Mahallla:</p>
+                                                <p class="attendant-value my-0">Botirlar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="#" role="button" class="btn btn-primary fw-semibold">Hamroh bo'lish</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                    tabindex="0">...</div>
+            </div>
+
+        </section>
+
+        <footer class="w-100 px-0 mx-0">
+            <div class="d-flex flex-column">
+                <div
+                    class="footer-links bg-dark d-flex flex-column flex-sm-row justify-content-around align-items-start m-0 p-5 p-sm-1">
+                    <div class="footer-soc-list d-flex flex-column justify-content-start gap-3 py-4">
+                        <p class="display-7 text-white fw-semibold m-0">Ijtimoiy tarmoqlar</p>
+                        <div class="container d-flex flex-column px-0">
+                            <a class="fs-6 fw-semibold text-decoration-none text-white-50 p-1" href=""><i
+                                    class="bi bi-instagram me-2"></i>Instagram</a>
+                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i
+                                    class="bi bi-telegram me-2"></i>Telegram</a>
+                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i
+                                    class="bi bi-facebook me-2"></i>Facebook</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact  d-flex flex-column justify-content-start gap-3 py-4">
+                        <p class="display-7 text-white fw-semibold m-0">Biz bilan bog'lanish</p>
+                        <div class="container d-flex flex-column align-items-start px-0">
+                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i
+                                    class="bi bi-phone me-2"></i>+998999999999</a>
+                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i
+                                    class="bi bi-envelope me-2"></i>hamrohtaxi@gmail.com</a>
+                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i
+                                    class="bi bi-map me-2"></i>Xorazm, Urganch</a>
+                        </div>
+                    </div>
+                    <div class="sitemap  d-flex flex-column justify-content-start gap-3 py-4">
+                        <p class="display-7 text-white fw-semibold m-0">Sayt xaritasi</p>
+                        <div class="container container d-flex flex-column align-items-start px-0">
+                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1">Bosh sahifa</a>
+                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1">Xabarlar</a>
+                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1">Biz haqimizda</a>
+                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1">Bining jamoa</a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column gap-3 justify-content-start align-items-center py-4">
+                        <p class="display-7 text-white fw-semibold m-0">Ilovani yuklab oling</p>
+                        <div class="d-flex flex-column align-items-center rounded bg-light p-2">
+                            <a href="" class=""><img src="./images/google-play.png" alt="" height="48px"></a>
+                            <a href="" class=""><img src="./images/App-Store.png" alt="" height="48px"></a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="footer-copy bg-secondary d-flex flex-row align-items-center justify-content-center text-white-50 gap-3 py-3 py-sm-2 mx-0">
+                    <i class="bi bi-c-square"></i>
+                    <p class="m-0 display-7 fw-semibold">Hamroh Taxi</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/filter.js"></script>
+
+</body>
+
+</html>
