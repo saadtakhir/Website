@@ -76,6 +76,10 @@
   --bs-highlight-bg: #fff3cd;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .btn-primary {
   background: #3b1e80 !important;
   border: none !important;
@@ -84,3 +88,73 @@
 .btn-primary:hover {
   background: #462a88 !important;
 }
+
+textarea{
+  visibility:hidden;
+}
+
+.collapse{
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: #fff;
+  height: 100vh;
+  width: 80%;
+  background: var(--bs-indigo);
+
+  transform: translateX(100%);
+  transition: all ease 150ms;
+}
+
+.show{
+  transform: translateX(0);
+}
+
+@media only screen and (max-width: 425px) {
+  
+  .navbar-toggler{
+    display: block;
+  }
+  .navbar-menu-lg{
+    display: none;
+  }
+  .feature .container{
+    flex-direction: column;    
+  }
+  .footer-links{
+    flex-direction: column;
+  }
+  .elonlar .container{
+    flex-direction: column;
+  }
+  .about .container{
+    flex-direction: column;
+  }
+  .our-team .team-members{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-toggler{
+    display: block;
+  }
+  .navbar-menu-lg{
+    display: none;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-toggler{
+    display: none;
+  }
+  .navbar-menu-lg{
+    display: flex;
+  }
+  .about .main-img{
+    width: 100%;
+  }
+
+}
+

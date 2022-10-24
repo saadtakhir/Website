@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hamroh Taxi</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #abd9e9;
+            font-family: Arial;
+        }
+
+        #container {
+            width: 750px;
+            height: 800px;
+            background: #eff3f7;
+            margin: 0 auto;
+            font-size: 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        aside {
+            width: 260px;
+            height: 800px;
+            background-color: #3b3e49;
+            display: inline-block;
+            font-size: 15px;
+            vertical-align: top;
+        }
+
+        main {
+            width: 490px;
+            height: 800px;
+            display: inline-block;
+            font-size: 15px;
+            vertical-align: top;
+        }
+
+        aside header {
+            padding: 30px 20px;
+        }
+
+        aside input {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 50px 0 20px;
+            background-color: #5e616a;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_search.png);
+            background-repeat: no-repeat;
+            background-position: 170px;
+            background-size: 40px;
+        }
+
+        aside input::placeholder {
+            color: #fff;
+        }
+
+        aside ul {
+            padding-left: 0;
+            margin: 0;
+            list-style-type: none;
+            overflow-y: scroll;
+            height: 690px;
+        }
+
+        aside li {
+            padding: 10px 0;
+        }
+
+        aside li:hover {
+            background-color: #5e616a;
+        }
+
+        h2,
+        h3 {
+            margin: 0;
+        }
+
+        aside li img {
+            border-radius: 50%;
+            margin-left: 20px;
+            margin-right: 8px;
+        }
+
+        aside li div {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 12px;
+        }
+
+        aside li h2 {
+            font-size: 14px;
+            color: #fff;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+
+        aside li h3 {
+            font-size: 12px;
+            color: #7e818a;
+            font-weight: normal;
+        }
+
+        .status {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 7px;
+        }
+
+        .green {
+            background-color: #58b666;
+        }
+
+        .orange {
+            background-color: #ff725d;
+        }
+
+        .blue {
+            background-color: #6fbced;
+            margin-right: 0;
+            margin-left: 7px;
+        }
+
+        main header {
+            height: 110px;
+            padding: 30px 20px 30px 40px;
+        }
+
+        main header>* {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        main header img:first-child {
+            border-radius: 50%;
+        }
+
+        main header img:last-child {
+            width: 24px;
+            margin-top: 8px;
+        }
+
+        main header div {
+            margin-left: 10px;
+            margin-right: 145px;
+        }
+
+        main header h2 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        main header h3 {
+            font-size: 14px;
+            font-weight: normal;
+            color: #7e818a;
+        }
+
+        #chat {
+            padding-left: 0;
+            margin: 0;
+            list-style-type: none;
+            overflow-y: scroll;
+            height: 535px;
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+        }
+
+        #chat li {
+            padding: 10px 30px;
+        }
+
+        #chat h2,
+        #chat h3 {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: normal;
+        }
+
+        #chat h3 {
+            color: #bbb;
+        }
+
+        #chat .entete {
+            margin-bottom: 5px;
+        }
+
+        #chat .message {
+            padding: 20px;
+            color: #fff;
+            line-height: 25px;
+            max-width: 90%;
+            display: inline-block;
+            text-align: left;
+            border-radius: 5px;
+        }
+
+        #chat .me {
+            text-align: right;
+        }
+
+        #chat .you .message {
+            background-color: #58b666;
+        }
+
+        #chat .me .message {
+            background-color: #6fbced;
+        }
+
+        #chat .triangle {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 10px 10px 10px;
+        }
+
+        #chat .you .triangle {
+            border-color: transparent transparent #58b666 transparent;
+            margin-left: 15px;
+        }
+
+        #chat .me .triangle {
+            border-color: transparent transparent #6fbced transparent;
+            margin-left: 375px;
+        }
+
+        main footer {
+            height: 155px;
+            padding: 20px 30px 10px 20px;
+        }
+
+        main footer textarea {
+            resize: none;
+            border: none;
+            display: block;
+            width: 100%;
+            height: 80px;
+            border-radius: 3px;
+            padding: 20px;
+            font-size: 13px;
+            margin-bottom: 13px;
+        }
+
+        main footer textarea::placeholder {
+            color: #ddd;
+        }
+
+        main footer img {
+            height: 30px;
+            cursor: pointer;
+        }
+
+        main footer a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #6fbced;
+            vertical-align: top;
+            margin-left: 333px;
+            margin-top: 5px;
+            display: inline-block;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- <nav class="navbar navbar-expand-lg px-8 py-3 shadow-sm mb-1">
+    <div class="flex justify-between items-center md:px-8">
+      <a class="navbar-brand font-bold" href="/">HamrohTaxi</a>
+      <button class="navbar-toggler bg-indigo-900 text-white px-2 py-1 rounded" type="button">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse flex flex-col justify-between gap-3 p-4" id="navbarNav">
+        <div class="collapse-menu flex justify-between">
+          <p class="m-0 text-2xl font-semibold">Menu</p>
+          <button class="close-menu bg-indigo-900 text-white px-1 rounded  text-2xl"><i class="bi bi-x"></i></button>
+        </div>
+        <ul class="flex flex-col gap-3 px-5">
+          <li class="nav-item">
+            <a class="nav-link font-semibold px-2 py-1 rounded" aria-current="page" href="/index.html"><i
+                class="fa fa-home me-1"></i>Asosiy sahifa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-semibold px-2 py-1 rounded" href="/ads.html"><i
+                class="fa fa-envelope me-1"></i>Elonlar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-semibold px-2 py-1 rounded" href="/masseges.html"><i
+                class="fa fa-envelope me-1"></i>Xabarlar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-semibold px-2 py-1 rounded" href="./about.html"><i
+                class="fa fa-info-circle me-1"></i>Biz haqimizda</a>
+          </li>
+          <li class="nav-item">
+            <a href="/signin.html" class="btn bg-slate-50 text-black font-semibold px-5 py-2 rounded"><i
+                class="fa fa-sign-in me-1"></i>Kirish</a>
+          </li>
+        </ul>
+        <div class="flex flex-col items-center">
+          <p>Ijtimoiy tarmoqlar</p>
+          <div class="flex gap-3 p-3">
+            <a href="" class=""><i class="bi bi-instagram text-xl"></i></a>
+            <a href="" class=""><i class="bi bi-telegram text-xl"></i></a>
+            <a href="" class=""><i class="bi bi-youtube text-xl"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-menu-lg">
+        <ul class="flex gap-3">
+          <li class="nav-item">
+            <a class="nav-link font-semibold opacity-70" aria-current="page" href="/index.html"><i
+                class="fa fa-home me-1"></i>Asosiy sahifa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-semibold opacity-70" href="/masseges.html"><i
+                class="fa fa-envelope me-1"></i>Xabarlar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-semibold opacity-70" href="./about.html"><i class="fa fa-info-circle me-1"></i>Biz
+              haqimizda</a>
+          </li>
+          <li class="nav-item font-semibold">
+            <a href="/signin.html" class="btn bg-indigo-900 px-3 py-1 rounded text-white"><i
+                class="fa fa-sign-in me-1"></i>Kirish</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+    <section class="block p-5 md:h-screen">
+        <p class="text-2xl md:text-center font-semibold mb-5">Xabarlar</p>
+        <div id="container">
+            <aside>
+                <header>
+                    <input type="text" placeholder="search">
+                </header>
+                <ul>
+                    <li>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
+                        <div>
+                            <h2>Prénom Nom</h2>
+                            <h3>
+                                <span class="status orange"></span>
+                                offline
+                            </h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_02.jpg" alt="">
+                        <div>
+                            <h2>Prénom Nom</h2>
+                            <h3>
+                                <span class="status green"></span>
+                                online
+                            </h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_03.jpg" alt="">
+                        <div>
+                            <h2>Prénom Nom</h2>
+                            <h3>
+                                <span class="status orange"></span>
+                                offline
+                            </h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_04.jpg" alt="">
+                        <div>
+                            <h2>Prénom Nom</h2>
+                            <h3>
+                                <span class="status green"></span>
+                                online
+                            </h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_05.jpg" alt="">
+                        <div>
+                            <h2>Prénom Nom</h2>
+                            <h3>
+                                <span class="status orange"></span>
+                                offline
+                            </h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_06.jpg" alt="">
+                        <div>
+                            <h2>Prénom Nom</h2>
+                            <h3>
+                                <span class="status green"></span>
+                                online
+                            </h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_07.jpg" alt="">
+                        <div>
+                            <h2>Prénom Nom</h2>
+                            <h3>
+                                <span class="status green"></span>
+                                online
+                            </h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_08.jpg" alt="">
+                        <div>
+                            <h2>Prénom Nom</h2>
+                            <h3>
+                                <span class="status green"></span>
+                                online
+                            </h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_09.jpg" alt="">
+                        <div>
+                            <h2>Prénom Nom</h2>
+                            <h3>
+                                <span class="status green"></span>
+                                online
+                            </h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_10.jpg" alt="">
+                        <div>
+                            <h2>Prénom Nom</h2>
+                            <h3>
+                                <span class="status orange"></span>
+                                offline
+                            </h3>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+            <main>
+                <header>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
+                    <div>
+                        <h2>Chat with Vincent Porter</h2>
+                        <h3>already 1902 messages</h3>
+                    </div>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png" alt="">
+                </header>
+                <ul id="chat">
+                    <li class="you">
+                        <div class="entete">
+                            <span class="status green"></span>
+                            <h2>Vincent</h2>
+                            <h3>10:12AM, Today</h3>
+                        </div>
+                        <div class="triangle"></div>
+                        <div class="message">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        </div>
+                    </li>
+                    <li class="me">
+                        <div class="entete">
+                            <h3>10:12AM, Today</h3>
+                            <h2>Vincent</h2>
+                            <span class="status blue"></span>
+                        </div>
+                        <div class="triangle"></div>
+                        <div class="message">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        </div>
+                    </li>
+                    <li class="me">
+                        <div class="entete">
+                            <h3>10:12AM, Today</h3>
+                            <h2>Vincent</h2>
+                            <span class="status blue"></span>
+                        </div>
+                        <div class="triangle"></div>
+                        <div class="message">
+                            OK
+                        </div>
+                    </li>
+                    <li class="you">
+                        <div class="entete">
+                            <span class="status green"></span>
+                            <h2>Vincent</h2>
+                            <h3>10:12AM, Today</h3>
+                        </div>
+                        <div class="triangle"></div>
+                        <div class="message">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        </div>
+                    </li>
+                    <li class="me">
+                        <div class="entete">
+                            <h3>10:12AM, Today</h3>
+                            <h2>Vincent</h2>
+                            <span class="status blue"></span>
+                        </div>
+                        <div class="triangle"></div>
+                        <div class="message">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        </div>
+                    </li>
+                    <li class="me">
+                        <div class="entete">
+                            <h3>10:12AM, Today</h3>
+                            <h2>Vincent</h2>
+                            <span class="status blue"></span>
+                        </div>
+                        <div class="triangle"></div>
+                        <div class="message">
+                            OK
+                        </div>
+                    </li>
+                </ul>
+                <footer>
+                    <textarea placeholder="Type your message"></textarea>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_picture.png" alt="">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_file.png" alt="">
+                    <a href="#">Send</a>
+                </footer>
+            </main>
+        </div>
+    </section>
+
+    <!-- <footer class="w-100 px-0 mx-0">
+    <div class="flex flex-col">
+      <div class="footer-links bg-slate-900 flex justify-around items-start m-0 p-5">
+        <div class="footer-soc-list flex flex-col justify-start gap-3 py-4">
+          <p class="text-lg text-white font-semibold m-0">Ijtimoiy tarmoqlar</p>
+          <div class="container flex flex-col px-0">
+            <a class="text-sm font-semibold text-decoration-none text-white p-1" href=""><i
+                class="bi bi-instagram mr-2"></i>Instagram</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-telegram mr-2"></i>Telegram</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-facebook mr-2"></i>Facebook</a>
+          </div>
+        </div>
+        <div class="footer-contact  flex flex-col justify-content-start gap-3 py-4">
+          <p class="text-lg text-white font-semibold m-0">Biz bilan bog'lanish</p>
+          <div class="container flex flex-col align-items-start px-0">
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-phone mr-2"></i>+998999999999</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-envelope mr-2"></i>hamrohtaxi@gmail.com</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-map mr-2"></i>Xorazm, Urganch</a>
+          </div>
+        </div>
+        <div class="sitemap  flex flex-col justify-content-start gap-3 py-4">
+          <p class="text-lg text-white font-semibold m-0">Sayt xaritasi</p>
+          <div class="container flex flex-col align-items-start px-0">
+            <a href="/index.html" class="text-sm font-semibold text-decoration-none text-white p-1">Bosh sahifa</a>
+            <a href="/profile.html" class="text-sm font-semibold text-decoration-none text-white p-1">Profile</a>
+            <a href="/about.html" class="text-sm font-semibold text-decoration-none text-white p-1">Biz haqimizda</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 justify-content-start align-items-center py-4">
+          <p class="text-white font-semibold m-0">Ilovani yuklab oling</p>
+          <div class="d-flex flex-column align-items-center rounded bg-white p-2">
+            <a href="" class=""><img src="./images/google-play.png" alt="" class="" width="120px"></a>
+            <a href="" class=""><img src="./images/App-Store.png" alt="" class="" width="120px"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copy bg-[#343a40] flex items-center justify-center text-white gap-3 py-3 py-sm-2 mx-0">
+        <i class="bi bi-c-circle"></i>
+        <p class="m-0 font-medium">2022 Hamroh Taxi</p>
+      </div>
+    </div>
+  </footer> -->
+
+
+</body>
+
+</html>
