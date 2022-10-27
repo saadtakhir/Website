@@ -84,3 +84,99 @@
 .btn-primary:hover {
   background: #462a88 !important;
 }
+
+.collapse{
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: #fff;
+  height: 100vh;
+  width: 80%;
+  background: var(--bs-indigo);
+
+  transform: translateX(100%);
+  transition: all ease 150ms;
+}
+
+.show{
+  transform: translateX(0);
+}
+
+.context-menu-container {
+  background-color: white;
+  z-index: 1000 !important;
+  border-radius: 5px;
+  position: absolute;
+  display: none;
+  border: solid thin black;
+  padding: 3px;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.18);
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.18);
+  min-width: 90px;
+}
+
+.context-menu-container>ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.context-menu-container>ul>li {
+  padding: 5px;
+  cursor: hand;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.context-menu-container>ul>li:hover {
+  background-color: #c4c4c4;
+}
+
+@media only screen and (max-width: 425px) {
+  
+  .open-menu{
+    display: block;
+  }
+  .navbar-menu-lg{
+    display: none;
+  }
+  .feature .container{
+    flex-direction: column;    
+  }
+  .footer-links{
+    flex-direction: column;
+  }
+  .elonlar .container{
+    flex-direction: column;
+  }
+  .about .container{
+    flex-direction: column;
+  }
+  .our-team .team-members{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .open-menu{
+    display: block;
+  }
+  .navbar-menu-lg{
+    display: none;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  .open-menu{
+    display: none;
+  }
+  .navbar-menu-lg{
+    display: flex;
+  }
+  .about .main-img{
+    width: 100%;
+  }
+
+}

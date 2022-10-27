@@ -1,350 +1,393 @@
 <!doctype html>
 <html lang="en">
 
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hamroh Taxi</title>
 
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="static/assets/css/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
-  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/brands.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
 
 </head>
 
 <body>
 
-  <header class="head1 mb-5">
-    <nav class="navbar navbar-expand-lg py-3">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="/">HamrohTaxi</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+  <header class="head1 md:h-screen  mb-16">
+    <nav class="navbar navbar-expand-lg px-8 py-3 shadow-sm mb-1 bg-gray-100">
+      <div class="flex justify-between items-center md:px-8">
+        <a class="navbar-brand text-3xl font-[900]" href="/">HamrohTaxi</a>
+        <button class="open-menu bg-indigo-900 text-white px-2 py-1 rounded" type="button">
+          <i class="bi bi-list"></i>
         </button>
-        <div class="collapse navbar-collapse  justify-content-end" id="navbarNav">
-          <ul class="navbar-nav text-center fw-semibold">
+        <div class="collapse flex flex-col justify-between gap-3 p-4" id="navbarNav">
+          <div class="collapse-menu flex justify-between">
+            <p class="m-0 text-2xl font-semibold">Menu</p>
+            <button class="close-menu bg-indigo-900 text-white px-1 rounded  text-2xl"><i class="bi bi-x"></i></button>
+          </div>
+          <ul class="flex flex-col gap-3 px-5">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#"><i class="fa fa-home me-1"></i>Asosiy sahifa</a>
+              <a class="nav-link font-semibold px-2 py-1 rounded" aria-current="page" href="/index.html"><i class="fa fa-home me-1"></i>Asosiy sahifa</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-envelope me-1"></i>Xabarlar</a>
+              <a class="nav-link font-semibold px-2 py-1 rounded" href="/ads.html"><i class="fa fa-envelope me-1"></i>Elonlar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./about.html"><i class="fa fa-info-circle me-1"></i>Biz haqimizda</a>
+              <a class="nav-link font-semibold px-2 py-1 rounded" href="/masseges.html"><i class="fa fa-envelope me-1"></i>Xabarlar</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-primary"><i class="fa fa-sign-in me-1"></i>Kirish</a>
+              <a class="nav-link font-semibold px-2 py-1 rounded" href="./about.html"><i class="fa fa-info-circle me-1"></i>Biz haqimizda</a>
+            </li>
+            <li class="nav-item">
+              <a href="/signin.html" class="btn bg-slate-50 text-black font-semibold px-5 py-2 rounded"><i class="fa fa-sign-in me-1"></i>Kirish</a>
+            </li>
+          </ul>
+          <div class="flex flex-col items-center">
+            <p>Ijtimoiy tarmoqlar</p>
+            <div class="flex gap-3 p-3">
+              <a href="" class=""><i class="bi bi-instagram text-xl"></i></a>
+              <a href="" class=""><i class="bi bi-telegram text-xl"></i></a>
+              <a href="" class=""><i class="bi bi-youtube text-xl"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-menu-lg">
+          <ul class="flex gap-3">
+            <li class="nav-item">
+              <a class="nav-link text-lg font-semibold opacity-70" aria-current="page" href="/index.html"><i
+                  class="fa fa-home me-1"></i>Asosiy sahifa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-lg font-semibold opacity-70" href="/masseges.html"><i class="fa fa-envelope me-1"></i>Xabarlar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-lg font-semibold opacity-70" href="./about.html"><i class="fa fa-info-circle me-1"></i>Biz
+                haqimizda</a>
+            </li>
+            <li class="nav-item font-semibold">
+              <a href="/signin.html" class="btn text-lg bg-indigo-900 px-3 py-1 rounded text-white"><i
+                  class="fa fa-sign-in me-1"></i>Kirish</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <section class="feature">
+    <section class="feature px-12">
 
-      <div class="">
-        <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center">
+      <div class="container flex  justify-center items-center gap-4">
 
-          <div class="p-0 m-0 flex justify-center items-center w-1/2">
-            <img class="m-0" src="./images/3682361.jpg" alt="">
-          </div>
+        <div class="sm:w-1/2">
+          <img class="" src="/static/images/3682361.jpg" alt="" class="" width="">
+        </div>
 
-          <div class="d-flex flex-column align-items-center w-50 px-5">
-            <h1 class="fw-bold">Hamroh Taxi</h1>
-            <p class="fs-6 my-sm-3 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-              placerat leo odio nibh
-              cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="" class="btn btn-primary btn-lg d-md-block fs-6 fw-bold"><i class="fa fa-search me-2  "></i> Hamroh
-              izlash</a>
-          </div>
-
+        <div class="flex flex-col items-center gap-5">
+          <h1 class="font-bold text-4xl">Hamroh Taxi</h1>
+          <p class="fs-6 my-sm-3 text-center w-3/4">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Pelle
+            ntesque
+            placerat leo odio.</p>
+          <a href="/signin.html" class="btn bg-indigo-900 text-white text-lg px-5 py-2 rounded font-bold">Hamroh
+            izlash</a>
         </div>
       </div>
 
     </section>
   </header>
 
-  <section class="elonlar  d-flex flex-column align-items-center gap-3 gap-sm-5 my-4 my-sm-5">
-    <h2 class="fs-2 fw-semibold m-0">Elonlar</h2>
-    <div class="container d-flex flex-column justify-content-evenly w-100 flex-sm-row mx-0 gap-3">
+  <section class="elonlar md:h-3/4  flex flex-col items-center gap-5 px-5 my-8">
+    <h2 class="text-3xl font-semibold m-0">Elonlar</h2>
+    <div class="container flex justify-evenly w-full gap-4">
 
-      <div class="d-flex flex-column align-items-end justify-content-center px-4 py-4 rounded bg-light shadow mx-3">
+      <div class="flex flex-col  items-end justify-center bg-slate-50 p-4 rounded bg-light shadow-lg mx-3">
 
-        <div class="d-flex justify-content-start w-100">
+        <div class="flex justify-start w-full">
           <div class="d-flex flex-column gap-3 px-3 py-4">
 
-            <div class="d-flex flex-row justify-content-start align-items-center">
-              <i class="fa fa-user"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Ismi:</p>
+            <div class="flex flex-row justify-start items-center">
+              <i class="bi bi-person-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Ismi:</p>
                 <p class="attendant-value my-0">Doniyor</p>
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-start">
-              <i class="fa fa-location-arrow"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Jo'nalish:</p>
+            <div class="flex flex-row items-center justify-start">
+              <i class="bi bi-geo-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Jo'nalish:</p>
                 <p class="attendant-value my-0">Gurlan - Urganch</p>
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-start">
-              <i class="fa fa-clock"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Ketish vaqti:</p>
+            <div class="flex flex-row items-center justify-start">
+              <i class="bi bi-clock-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Ketish vaqti:</p>
                 <p class="attendant-value my-0">8:00</p>
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-start">
-              <i class="fa fa-users"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Hamrohlar soni:</p>
+            <div class="flex flex-row items-center justify-start">
+              <i class="bi bi-people-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Hamrohlar soni:</p>
                 <p class="attendant-value my-0">3 ta</p>
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-start">
-              <i class="fa fa-map-marker"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Mahallla:</p>
+            <div class="flex flex-row items-center justify-start">
+              <i class="bi bi-map-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Mahallla:</p>
                 <p class="attendant-value my-0">Botirlar</p>
               </div>
             </div>
           </div>
         </div>
 
-        <a href="#" role="button" class="btn btn-primary fw-semibold">Hamroh bo'lish</a>
+        <a href="#" role="button" class="btn bg-indigo-900 text-white text-sm font-semibold rounded py-2 px-5">Hamroh
+          bo'lish</a>
       </div>
 
-      <div class="d-flex flex-column align-items-end justify-content-center px-4 py-4 rounded bg-light shadow mx-3">
+      <div class="flex flex-col  items-end justify-center bg-slate-50 p-4 rounded bg-light shadow-lg mx-3">
 
-        <div class="d-flex justify-content-start w-100">
+        <div class="flex justify-start w-full">
           <div class="d-flex flex-column gap-3 px-3 py-4">
 
-            <div class="d-flex flex-row justify-content-start align-items-center">
-              <i class="fa fa-user"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Ismi:</p>
-                <p class="attendant-value my-0">Shaxriyor</p>
+            <div class="flex flex-row justify-start items-center">
+              <i class="bi bi-person-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Ismi:</p>
+                <p class="attendant-value my-0">Doniyor</p>
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-start">
-              <i class="fa fa-location-arrow"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Jo'nalish:</p>
-                <p class="attendant-value my-0">Hozarasp - Urganch</p>
+            <div class="flex flex-row items-center justify-start">
+              <i class="bi bi-geo-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Jo'nalish:</p>
+                <p class="attendant-value my-0">Gurlan - Urganch</p>
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-start">
-              <i class="fa fa-clock"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Ketish vaqti:</p>
+            <div class="flex flex-row items-center justify-start">
+              <i class="bi bi-clock-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Ketish vaqti:</p>
                 <p class="attendant-value my-0">8:00</p>
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-start">
-              <i class="fa fa-users"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Hamrohlar soni:</p>
+            <div class="flex flex-row items-center justify-start">
+              <i class="bi bi-people-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Hamrohlar soni:</p>
                 <p class="attendant-value my-0">3 ta</p>
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-start">
-              <i class="fa fa-map-marker"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Mahallla:</p>
-                <p class="attendant-value my-0">Uchchinor</p>
+            <div class="flex flex-row items-center justify-start">
+              <i class="bi bi-map-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Mahallla:</p>
+                <p class="attendant-value my-0">Botirlar</p>
               </div>
             </div>
           </div>
         </div>
 
-        <a href="#" role="button" class="btn btn-primary fw-semibold">Hamroh bo'lish</a>
+        <a href="#" role="button" class="btn bg-indigo-900 text-white text-sm font-semibold rounded py-2 px-5">Hamroh
+          bo'lish</a>
       </div>
 
-      <div class="d-flex flex-column align-items-end justify-content-center px-4 py-4 rounded bg-light shadow mx-3">
+      <div class="flex flex-col  items-end justify-center bg-slate-50 p-4 rounded bg-light shadow-lg mx-3">
 
-        <div class="d-flex justify-content-start w-100">
+        <div class="flex justify-start w-full">
           <div class="d-flex flex-column gap-3 px-3 py-4">
 
-            <div class="d-flex flex-row justify-content-start align-items-center">
-              <i class="fa fa-user"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Ismi:</p>
-                <p class="attendant-value my-0">Usmon</p>
+            <div class="flex flex-row justify-start items-center">
+              <i class="bi bi-person-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Ismi:</p>
+                <p class="attendant-value my-0">Doniyor</p>
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-start">
-              <i class="fa fa-location-arrow"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Jo'nalish:</p>
-                <p class="attendant-value my-0">Shovot - Urganch</p>
+            <div class="flex flex-row items-center justify-start">
+              <i class="bi bi-geo-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Jo'nalish:</p>
+                <p class="attendant-value my-0">Gurlan - Urganch</p>
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-start">
-              <i class="fa fa-clock"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Ketish vaqti:</p>
+            <div class="flex flex-row items-center justify-start">
+              <i class="bi bi-clock-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Ketish vaqti:</p>
                 <p class="attendant-value my-0">8:00</p>
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-start">
-              <i class="fa fa-users"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Hamrohlar soni:</p>
+            <div class="flex flex-row items-center justify-start">
+              <i class="bi bi-people-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Hamrohlar soni:</p>
                 <p class="attendant-value my-0">3 ta</p>
               </div>
             </div>
-            <div class="d-flex flex-row align-items-center justify-content-start">
-              <i class="fa fa-map-marker"></i>
-              <div class="d-flex align-items-center justify-content-center">
-                <p class="fw-bold mx-2 my-0">Mahallla:</p>
-                <p class="attendant-value my-0">Tuproqqala</p>
+            <div class="flex flex-row items-center justify-start">
+              <i class="bi bi-map-fill"></i>
+              <div class="flex items-center justify-center">
+                <p class="font-bold mx-2 my-0">Mahallla:</p>
+                <p class="attendant-value my-0">Botirlar</p>
               </div>
             </div>
           </div>
         </div>
 
-        <a href="#" role="button" class="btn btn-primary fw-semibold">Hamroh bo'lish</a>
+        <a href="#" role="button" class="btn bg-indigo-900 text-white text-sm font-semibold rounded py-2 px-5">Hamroh
+          bo'lish</a>
       </div>
 
     </div>
-    <a href="./ads.html" role="button" class="btn btn-lg btn-primary fw-semibold">Ko'proq e'lonlar</a>
+    <a href="./ads.html" role="button" class="btn bg-indigo-900 text-white font-semibold py-2 px-5 rounded">Ko'proq
+      e'lonlar</a>
   </section>
 
-  <section class="about d-flex flex-column justify-content-center align-items-center px-sm-5 mx-3 my-5">
-    <div class=" d-flex flex-column flex-sm-row justify-content-around align-items-center mx-sm-5 p-5 bg-light rounded shadow">
+  <section class="about md:h-screen flex flex-col  justify-center items-center xl:w-3/4-a px-8">
+    <div class="container flex justify-center items-center px-8 pb-5 bg-slate-50 rounded shadow-lg">
       <div class="main-img">
-        <img src="./images/about-img.png" alt="" class="img-fluid">
+        <img src="/static/images/about-img.png" alt="" class="img-fluid">
       </div>
-      <div class="about-info d-flex flex-column align-items-center">
-        <p class="fs-2 fw-semibold">Biz haqimizda</p>
-        <p class="fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In nesciunt necessitatibus autem? Ducimus quibusdam ab, voluptas odit velit quae fuga alias eveniet harum. Rem nihil quidem harum quam repellat optio?</p>
-        <div class="d-flex flex-row gap-3 p-2">
-          <a href=""><img width="25px" src="./node_modules/@fortawesome/fontawesome-free/svgs/brands/instagram.svg" alt=""></a>
-          <a href=""><img width="25px" src="./node_modules/@fortawesome/fontawesome-free/svgs/brands/telegram.svg" alt=""></a>
-          <a href=""><img width="25px" src="./node_modules/@fortawesome/fontawesome-free/svgs/brands/facebook.svg" alt=""></a>
+      <div class="about-info flex flex-col items-center gap-3">
+        <p class="text-3xl font-semibold">Biz haqimizda</p>
+        <p class="text-center ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In nesciunt necessitatibus
+          autem?
+          Ducimus quibusdam ab, voluptas odit velit quae fuga alias eveniet harum. Rem nihil quidem harum quam repellat
+          optio?</p>
+        <div class="flex gap-3 p-3">
+          <a href="" class=""><i class="bi bi-instagram text-xl"></i></a>
+          <a href="" class=""><i class="bi bi-telegram text-xl"></i></a>
+          <a href="" class=""><i class="bi bi-youtube text-xl"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="our-team d-flex flex-column align-items-center">
+  <section class="our-team md:h-[90%] flex flex-col items-center justify-center">
 
-    <div class="container d-flex flex-column align-items-center gap-5 my-5">
-      <p class="fs-2 fw-semibold m-0">Bizning jamoa</p>
-      <div class="team-members d-flex flex-column gap-5 flex-sm-row">
-        <div class="d-flex flex-column align-items-center p-5 rounded bg-light shadow mx-3">
-          <img src="./images/Web design.png" alt="">
-          <p class="fs-4 fw-semibold m-0">UI/UX Design</p>
+    <div class="container flex flex-col items-center gap-5 my-5">
+      <p class="text-3xl font-semibold m-0">Bizning jamoa</p>
+      <div class="team-members flex gap-5 flex-sm-row">
+        <div class="flex flex-col items-center p-5 rounded bg-slate-50 w-full shadow mx-3">
+          <img src="/static/images/Web design.png" alt="">
+          <p class="text-xl font-semibold m-0">UI/UX Design</p>
           <p class="fs-5 m-0">Saad Takhir</p>
-          <div class="d-flex flex-row gap-3 p-2">
-            <a href=""><img width="25px" src="./node_modules/@fortawesome/fontawesome-free/svgs/brands/instagram.svg" alt=""></a>
-            <a href=""><img width="25px" src="./node_modules/@fortawesome/fontawesome-free/svgs/brands/telegram.svg" alt=""></a>
-            <a href=""><img width="25px" src="./node_modules/@fortawesome/fontawesome-free/svgs/brands/facebook.svg" alt=""></a>
+          <div class="flex gap-3 p-3">
+            <a href="" class=""><i class="bi bi-instagram text-xl"></i></a>
+            <a href="" class=""><i class="bi bi-telegram text-xl"></i></a>
+            <a href="" class=""><i class="bi bi-youtube text-xl"></i></a>
           </div>
         </div>
-        <div class="d-flex flex-column align-items-center p-5 rounded bg-light shadow mx-3">
-          <img src="./images/Web design.png" alt="">
-          <p class="fs-4 fw-semibold m-0">Frontend Dev</p>
+        <div class="flex flex-col items-center p-5 rounded bg-slate-50 w-full shadow mx-3">
+          <img src="/static/images/Web design.png" alt="">
+          <p class="text-xl font-semibold m-0">Frontend Dev</p>
           <p class="fs-5 m-0">Mirzohid</p>
-          <div class="d-flex flex-row gap-3 p-2">
-            <a href=""><img width="25px" src="./node_modules/@fortawesome/fontawesome-free/svgs/brands/instagram.svg" alt=""></a>
-            <a href=""><img width="25px" src="./node_modules/@fortawesome/fontawesome-free/svgs/brands/telegram.svg" alt=""></a>
-            <a href=""><img width="25px" src="./node_modules/@fortawesome/fontawesome-free/svgs/brands/facebook.svg" alt=""></a>
+          <div class="flex gap-3 p-3">
+            <a href="" class=""><i class="bi bi-instagram text-xl"></i></a>
+            <a href="" class=""><i class="bi bi-telegram text-xl"></i></a>
+            <a href="" class=""><i class="bi bi-youtube text-xl"></i></a>
           </div>
         </div>
-        <div class="d-flex flex-column align-items-center p-5 rounded bg-light shadow mx-3">
-          <img src="./images/Web design.png" alt="">
-          <p class="fs-4 fw-semibold m-0">Backend Dev</p>
+        <div class="flex flex-col items-center p-5 rounded bg-slate-50 w-full shadow mx-3">
+          <img src="/static/images/Web design.png" alt="">
+          <p class="text-xl font-semibold m-0">Backend Dev</p>
           <p class="fs-5 m-0">Doniyor</p>
-          <div class="d-flex flex-row gap-3 p-2">
-            <a href=""><img width="25px" src="./node_modules/@fortawesome/fontawesome-free/svgs/brands/instagram.svg" alt=""></a>
-            <a href=""><img width="25px" src="./node_modules/@fortawesome/fontawesome-free/svgs/brands/telegram.svg" alt=""></a>
-            <a href=""><img width="25px" src="./node_modules/@fortawesome/fontawesome-free/svgs/brands/facebook.svg" alt=""></a>
+          <div class="flex gap-3 p-3">
+            <a href="" class=""><i class="bi bi-instagram text-xl"></i></a>
+            <a href="" class=""><i class="bi bi-telegram text-xl"></i></a>
+            <a href="" class=""><i class="bi bi-youtube text-xl"></i></a>
           </div>
         </div>
       </div>
-      <a href="#" role="button" class="btn btn-lg btn-primary fw-semibold">Batafsil</a>
+      <a href="#" role="button" class="btn bg-indigo-900 text-white rounded font-semibold py-2 px-5">Batafsil</a>
     </div>
 
   </section>
 
-  <section class="contac-us px-1 d-flex justify-content-center">
+  <section class="contac-us md:h-screen px-8 flex justify-center">
 
-    <div class="d-flex flex-column flex-sm-row align-items-center px-5 gap-5 rounded shadow my-5" style="width: fit-content !important;">
-      <div class="">
-        <p class="fs-3 fw-semibold">Biz bilan bog'lanish</p>
+    <div class="container inline-flex flex-col md:flex-row items-center p-5 gap-5 bg-slate-50 rounded shadow my-5"
+      style="width: fit-content !important;">
+      <div class="inline-flex flex-col gap-4 p-5 rounded">
+        <p class="text-2xl font-semibold text-center">Biz bilan bog'lanish</p>
         <form>
           <div class="mb-3">
-            <label for="name">Ism:</label>
-            <input type="text" class="form-control" placeholder="John Doe" aria-label="First name">
+            <label for="name" class="font-semibold">Ism:</label>
+            <input type="text" class="form-control rounded w-full px-3 py-1" placeholder="John Doe"
+              aria-label="First name">
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email:</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@example.com">
+            <label for="exampleInputEmail1" class="font-semibold">Email:</label>
+            <input type="email" class="form-control rounded w-full px-3 py-1" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="example@example.com">
           </div>
           <div class="">
-            <textarea class="form-control" placeholder="Murojatingizni yozing..." id="floatingTextarea2" style="height: 100px"></textarea>
+            <textarea class="form-control rounded w-full px-3 py-1" placeholder="Murojaatingizni yozing..."
+              id="floatingTextarea2" style="height: 100px"></textarea>
             <label for="floatingTextarea2"></label>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn text-white rounded bg-indigo-900 py-1 px-3">Submit</button>
         </form>
       </div>
-      <div class="img-fulid">
-        <img src="/images/12982910_5124556.jpg" alt="" width="500px">
+      <div class="img-fluid">
+        <img src="/static/images/12982910_5124556-removebg-preview.png" alt="" width="500px">
       </div>
     </div>
 
   </section>
 
   <footer class="w-100 px-0 mx-0">
-    <div class="d-flex flex-column">
-      <div class="footer-links bg-dark d-flex flex-column flex-sm-row justify-content-around align-items-start m-0 p-0">
-        <div class="footer-soc-list d-flex flex-column justify-content-start gap-3 py-4">
-          <p class="display-7 text-white fw-semibold m-0">Ijtimoiy tarmoqlar</p>
-          <div class="container d-flex flex-column px-0">
-            <a class="fs-6 fw-semibold text-decoration-none text-white-50 p-1" href=""><i class="bi bi-instagram me-2"></i>Instagram</a>
-            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i class="bi bi-telegram me-2"></i>Telegram</a>
-            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i class="bi bi-facebook me-2"></i>Facebook</a>
+    <div class="flex flex-col">
+      <div class="footer-links bg-slate-900 flex justify-around items-start m-0 p-5">
+        <div class="footer-soc-list flex flex-col justify-start gap-3 py-4">
+          <p class="text-lg text-white font-semibold m-0">Ijtimoiy tarmoqlar</p>
+          <div class="container flex flex-col px-0">
+            <a class="text-sm font-semibold text-decoration-none text-white p-1" href=""><i
+                class="bi bi-instagram mr-2"></i>Instagram</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-telegram mr-2"></i>Telegram</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-facebook mr-2"></i>Facebook</a>
           </div>
         </div>
-        <div class="footer-contact  d-flex flex-column justify-content-start gap-3 py-4">
-          <p class="display-7 text-white fw-semibold m-0">Biz bilan bog'lanish</p>
-          <div class="container d-flex flex-column align-items-start px-0">
-            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i class="bi bi-phone me-2"></i>+998999999999</a>
-            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i class="bi bi-envelope me-2"></i>hamrohtaxi@gmail.com</a>
-            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i class="bi bi-map me-2"></i>Xorazm, Urganch</a>
+        <div class="footer-contact  flex flex-col justify-content-start gap-3 py-4">
+          <p class="text-lg text-white font-semibold m-0">Biz bilan bog'lanish</p>
+          <div class="container flex flex-col align-items-start px-0">
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-phone mr-2"></i>+998999999999</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-envelope mr-2"></i>hamrohtaxi@gmail.com</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-map mr-2"></i>Xorazm, Urganch</a>
           </div>
         </div>
-        <div class="sitemap  d-flex flex-column justify-content-start gap-3 py-4">
-          <p class="display-7 text-white fw-semibold m-0">Sayt xaritasi</p>
-          <div class="container container d-flex flex-column align-items-start px-0">
-            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1">Bosh sahifa</a>
-            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1">Xabarlar</a>
-            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1">Biz haqimizda</a>
-            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1">Bining jamoa</a>
+        <div class="sitemap  flex flex-col justify-content-start gap-3 py-4">
+          <p class="text-lg text-white font-semibold m-0">Sayt xaritasi</p>
+          <div class="container flex flex-col align-items-start px-0">
+            <a href="/index.html" class="text-sm font-semibold text-decoration-none text-white p-1">Bosh sahifa</a>
+            <a href="/profile.html" class="text-sm font-semibold text-decoration-none text-white p-1">Profile</a>
+            <a href="/about.html" class="text-sm font-semibold text-decoration-none text-white p-1">Biz haqimizda</a>
           </div>
         </div>
-        <div class="d-flex flex-column gap-3 justify-content-start align-items-center py-4">
-          <p class="display-7 text-white fw-semibold m-0">Ilovani yuklab oling</p>
-          <div class="d-flex flex-column align-items-center rounded bg-light p-2">
-            <a href="" class=""><img src="./images/google-play.png" alt="" class="" width="120px"></a>
-            <a href="" class=""><img src="./images/App-Store.png" alt="" class="" width="120px"></a>
+        <div class="flex flex-col gap-3 justify-content-start align-items-center py-4">
+          <p class="text-white font-semibold m-0">Ilovani yuklab oling</p>
+          <div class="d-flex flex-column align-items-center rounded bg-white p-2">
+            <a href="" class=""><img src="/static/images/google-play.png" alt="" class="" width="120px"></a>
+            <a href="" class=""><img src="/static/images/App-Store.png" alt="" class="" width="120px"></a>
           </div>
         </div>
       </div>
-      <div class="footer-copy bg-[#343a40] d-flex flex-row align-items-center justify-content-center text-white-50 gap-3 py-3 py-sm-2 mx-0">
+      <div class="footer-copy bg-[#343a40] flex items-center justify-center text-white gap-3 py-3 py-sm-2 mx-0">
         <i class="bi bi-c-circle"></i>
-        <p class="m-0 display-7 fw-semibold">2022 Hamroh Taxi</p>
+        <p class="m-0 font-medium">2022 Hamroh Taxi</p>
       </div>
     </div>
-  </footer>fhxfhf
+  </footer>
 
-  <script type="text/javascript" src="/assets/js/script.js"></script>
+  <script src="static/assets/js/script.js" type="text/javascript"></script>
 
 </body>
 

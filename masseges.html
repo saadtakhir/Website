@@ -2,162 +2,208 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hamroh Taxi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hamroh Taxi</title>
 
-    <link rel="icon" href="./images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/brands.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="static/assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
 
 </head>
 
 <body>
 
-    <main class="vh-100">
-        <div class="d-flex d-sm-none p-4 justify-content-between fixed-top">
-            <span class="d-flex gap-2">
-                <button class="sm-menu-open sm-btn fs-4 bg-light rounded px-2 border-0"><i
-                        class="bi bi-list"></i></button>
-                <p class="fs-4 fw-semibold m-0">Elonlar</p>
-            </span>
-            <div class="sm-collapse d-flex flex-column justify-content-between">
-                <div class="d-flex justify-content-between align-items-center">
-                    <p class="fs-4 fw-semibold m-0">Menu</p>
-                    <button class="sm-menu-close sm-btn fs-4 bg-light rounded px-2 border-0"><i
-                            class="bi bi-x"></i></button>
-                </div>
-                <div>
-                    <ul>
-                        <li><a href="">Link-1</a></li>
-                        <li><a href="">Link-2</a></li>
-                        <li><a href="">Link-3</a></li>
-                        <li><a href="">Link-4</a></li>
-                        <li><a href="">Link-5</a></li>
-                        <li><a href="">Link-6</a></li>
-                    </ul>
-                </div>
-            </div>
-            <a class="sm-menu-open sm-btn fs-5 bg-light rounded-pill px-2 border-0"><i class="bi bi-person"></i></a>
+  <nav class="navbar navbar-expand-lg px-8 py-3 shadow-sm mb-1">
+    <div class="flex justify-between items-center md:px-8">
+      <a class="navbar-brand font-bold" href="/">HamrohTaxi</a>
+      <button class="open-menu bg-indigo-900 text-white px-2 py-1 rounded" type="button">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse flex flex-col justify-between gap-3 p-4" id="navbarNav">
+        <div class="collapse-menu flex justify-between">
+          <p class="m-0 text-2xl font-semibold">Menu</p>
+          <button class="close-menu bg-indigo-900 text-white px-1 rounded  text-2xl"><i class="bi bi-x"></i></button>
         </div>
-
-        <nav class="navbar navbar-expand-lg py-3 mb-5 shadow-sm">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="/">HamrohTaxi</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse  justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav text-center fw-semibold">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./index.html"><i
-                                    class="fa fa-home me-1"></i>Asosiy
-                                sahifa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-envelope me-1"></i>Xabarlar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-info-circle me-1"></i>Biz haqimizda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-primary bg-gradient"><i class="fa fa-sign-in me-2"></i>Kirish</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <section class="my-5 p-4">
-            <div class="d-flex justify-content-between px-3 py-2 rounded bg-light">
-                <input type="text" class="border-0 bg-light" placeholder="Hamroh izlash..."
-                    aria-label="Hamroh izlash..." style="outline: none;" aria-describedby="button-addon2">
-                <button class="btn-sm border-0 px-2 py-1 rounded-pill text-white" style="background: #3b1e80;"
-                    type="button" id="button-addon2"><i class="bi bi-search"></i></button>
-            </div>
-            <div class="container-ads d-flex flex-column">
-
-                <div class="d-flex align-items-end">
-                    <div class="d-flex flex-column gap-1 align-items-start justify-content-between">
-                        <span>
-                            <i class="bi"></i>Ismi:<p>Shaxriyor</p>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="d-sm-block d-md-none">
-            <div class="d-flex justify-content-around align-items-center position-sticky bottom-0 end-0 p-2 shadow rounded-top">
-                <btn href="#" class="btn btn-primary fs-4 text-decoration-none  px-4 rounded active"><i
-                        class="bi bi-megaphone-fill m-0 p-0"></i></btn>
-                <btn href="#" class="btn btn-primary fs-4 text-decoration-none  px-4 rounded"><i
-                        class="bi bi-envelope-fill m-0 p-0"></i></btn>
-                <btn href="#" class="btn btn-primary fs-4 text-decoration-none  px-4 rounded"><i
-                        class="bi bi-list-ul m-0 p-0"></i></btn>
-            </div>
+        <ul class="flex flex-col gap-3 px-5">
+          <li class="nav-item">
+            <a class="nav-link font-semibold px-2 py-1 rounded" aria-current="page" href="/index.html"><i
+                class="fa fa-home me-1"></i>Asosiy sahifa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-semibold px-2 py-1 rounded" href="/ads.html"><i
+                class="fa fa-envelope me-1"></i>Elonlar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-semibold px-2 py-1 rounded" href="/masseges.html"><i
+                class="fa fa-envelope me-1"></i>Xabarlar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-semibold px-2 py-1 rounded" href="./about.html"><i
+                class="fa fa-info-circle me-1"></i>Biz haqimizda</a>
+          </li>
+          <li class="nav-item">
+            <a href="/signin.html" class="btn bg-slate-50 text-black font-semibold px-5 py-2 rounded"><i
+                class="fa fa-sign-in me-1"></i>Kirish</a>
+          </li>
+        </ul>
+        <div class="flex flex-col items-center">
+          <p>Ijtimoiy tarmoqlar</p>
+          <div class="flex gap-3 p-3">
+            <a href="" class=""><i class="bi bi-instagram text-xl"></i></a>
+            <a href="" class=""><i class="bi bi-telegram text-xl"></i></a>
+            <a href="" class=""><i class="bi bi-youtube text-xl"></i></a>
+          </div>
         </div>
+      </div>
+      <div class="navbar-menu-lg">
+        <ul class="flex gap-3">
+          <li class="nav-item">
+            <a class="nav-link font-semibold opacity-70" aria-current="page" href="/index.html"><i
+                class="fa fa-home me-1"></i>Asosiy sahifa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-semibold opacity-70" href="/masseges.html"><i
+                class="fa fa-envelope me-1"></i>Xabarlar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-semibold opacity-70" href="./about.html"><i class="fa fa-info-circle me-1"></i>Biz
+              haqimizda</a>
+          </li>
+          <li class="nav-item font-semibold">
+            <a href="/signin.html" class="btn bg-indigo-900 px-3 py-1 rounded text-white"><i
+                class="fa fa-sign-in me-1"></i>Kirish</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-
-        <footer class="w-100 px-0 mx-0">
-            <div class="d-flex flex-column">
-                <div
-                    class="footer-links bg-dark d-flex flex-column flex-sm-row justify-content-around align-items-start m-0 p-5 p-sm-1">
-                    <div class="footer-soc-list d-flex flex-column justify-content-start gap-3 py-4">
-                        <p class="display-7 text-white fw-semibold m-0">Ijtimoiy tarmoqlar</p>
-                        <div class="container d-flex flex-column px-0">
-                            <a class="fs-6 fw-semibold text-decoration-none text-white-50 p-1" href=""><i
-                                    class="bi bi-instagram me-2"></i>Instagram</a>
-                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i
-                                    class="bi bi-telegram me-2"></i>Telegram</a>
-                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i
-                                    class="bi bi-facebook me-2"></i>Facebook</a>
-                        </div>
-                    </div>
-                    <div class="footer-contact  d-flex flex-column justify-content-start gap-3 py-4">
-                        <p class="display-7 text-white fw-semibold m-0">Biz bilan bog'lanish</p>
-                        <div class="container d-flex flex-column align-items-start px-0">
-                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i
-                                    class="bi bi-phone me-2"></i>+998999999999</a>
-                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i
-                                    class="bi bi-envelope me-2"></i>hamrohtaxi@gmail.com</a>
-                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1"><i
-                                    class="bi bi-map me-2"></i>Xorazm, Urganch</a>
-                        </div>
-                    </div>
-                    <div class="sitemap  d-flex flex-column justify-content-start gap-3 py-4">
-                        <p class="display-7 text-white fw-semibold m-0">Sayt xaritasi</p>
-                        <div class="container container d-flex flex-column align-items-start px-0">
-                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1">Bosh sahifa</a>
-                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1">Xabarlar</a>
-                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1">Biz haqimizda</a>
-                            <a href="" class="fs-6 fw-semibold text-decoration-none text-white-50 p-1">Bining jamoa</a>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column gap-3 justify-content-start align-items-center py-4">
-                        <p class="display-7 text-white fw-semibold m-0">Ilovani yuklab oling</p>
-                        <div class="d-flex flex-column align-items-center rounded bg-light p-2">
-                            <a href="" class=""><img src="./images/google-play.png" alt="" height="48px"></a>
-                            <a href="" class=""><img src="./images/App-Store.png" alt="" height="48px"></a>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="footer-copy bg-secondary d-flex flex-row align-items-center justify-content-center text-white-50 gap-3 py-3 py-sm-2 mx-0">
-                    <i class="bi bi-c-circle"></i>
-                    <p class="m-0 display-7 fw-semibold">Hamroh Taxi</p>
-                </div>
+  <section class="block p-5 md:h-screen">
+    <p class="text-2xl md:text-center font-semibold mb-5">Xabarlar</p>
+    <div class="inline-flex gap-2 h-4/5 w-full">
+      <div class="inline-flex overflow-scroll scroll-px-5 flex-col w-full md:w-1/4 md:border-r-2 gap-2 md:pr-3">
+        <div class="inline-flex w-full hover:bg-slate-200 justify-between border-2 rounded py-2 px-4">
+          <button>Shaxriyor</button>
+          <span class="bg-slate-100 py-2 px-4 rounded-full">1</span>
+        </div>
+        <div class="inline-flex hover:bg-slate-200 w-full justify-between border-2 rounded py-2 px-4">
+          <button>Shaxriyor</button>
+          <span class="bg-slate-100 py-2 px-4 rounded-full">1</span>
+        </div>
+        <div class="inline-flex hover:bg-slate-200 w-full justify-between border-2 rounded py-2 px-4">
+          <button>Shaxriyor</button>
+          <span class="bg-slate-100 py-2 px-4 rounded-full">1</span>
+        </div>
+        <div class="inline-flex hover:bg-slate-200 w-full justify-between border-2 rounded py-2 px-4">
+          <button>Shaxriyor</button>
+          <span class="bg-slate-100 py-2 px-4 rounded-full">1</span>
+        </div>
+        <div class="inline-flex hover:bg-slate-200 w-full justify-between border-2 rounded py-2 px-4">
+          <button>Shaxriyor</button>
+          <span class="bg-slate-100 py-2 px-4 rounded-full">1</span>
+        </div>
+        <div class="inline-flex hover:bg-slate-200 w-full justify-between border-2 rounded py-2 px-4">
+          <button>Shaxriyor</button>
+          <span class="bg-slate-100 py-2 px-4 rounded-full">1</span>
+        </div>
+        <div class="inline-flex hover:bg-slate-200 w-full justify-between border-2 rounded py-2 px-4">
+          <button>Shaxriyor</button>
+          <span class="bg-slate-100 py-2 px-4 rounded-full">1</span>
+        </div>
+        <div class="inline-flex hover:bg-slate-200 w-full justify-between border-2 rounded py-2 px-4">
+          <button>Shaxriyor</button>
+          <span class="bg-slate-100 py-2 px-4 rounded-full">1</span>
+        </div>
+        <div class="inline-flex hover:bg-slate-200 w-full justify-between border-2 rounded py-2 px-4">
+          <button>Shaxriyor</button>
+          <span class="bg-slate-100 py-2 px-4 rounded-full">1</span>
+        </div>
+      </div>
+      <div class="hidden md:flex w-3/4 border-2 rounded">
+        <div class="shaxriyor text-xl flex w-full flex-col">
+          <div class="flex justify-between h-[fit-content] bg-slate-100 py-4 px-8">
+            <div>
+              <button class="bg-white px-3 py-1 rounded-md">
+                <i class="bi bi-arrow-left"></i>
+              </button>
+              <span>Shaxriyor</span>
             </div>
-        </footer>
-    </main>
+            <div class="btn-group">
+              <button type="button" class="btn bg-white px-3 py-1 rounded" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-three-dots"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button">Action</button></li>
+                <li><button class="dropdown-item" type="button">Another action</button></li>
+                <li><button class="dropdown-item" type="button">Something else here</button></li>
+              </ul>
+            </div>
+          </div>
+          <div class="message-area h-4/5">
 
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/filter.js"></script>
+          </div>
+          <div class="inline-flex justify-center bg-slate-100 py-2 px-8 shadow">
+            <input class="outline-0 w-full rounded-l-md py-2 px-8" type="text" name="message-area" id="" placeholder="Xabaringizni yozing...">
+            <button class="btn bg-sky-500 py-2 px-8 rounded-r-md text-white font-bold"><i class="bi bi-send"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="w-100 px-0 mx-0">
+    <div class="flex flex-col">
+      <div class="footer-links bg-slate-900 flex justify-around items-start m-0 p-5">
+        <div class="footer-soc-list flex flex-col justify-start gap-3 py-4">
+          <p class="text-lg text-white font-semibold m-0">Ijtimoiy tarmoqlar</p>
+          <div class="container flex flex-col px-0">
+            <a class="text-sm font-semibold text-decoration-none text-white p-1" href=""><i
+                class="bi bi-instagram mr-2"></i>Instagram</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-telegram mr-2"></i>Telegram</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-facebook mr-2"></i>Facebook</a>
+          </div>
+        </div>
+        <div class="footer-contact  flex flex-col justify-content-start gap-3 py-4">
+          <p class="text-lg text-white font-semibold m-0">Biz bilan bog'lanish</p>
+          <div class="container flex flex-col align-items-start px-0">
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-phone mr-2"></i>+998999999999</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-envelope mr-2"></i>hamrohtaxi@gmail.com</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-map mr-2"></i>Xorazm, Urganch</a>
+          </div>
+        </div>
+        <div class="sitemap  flex flex-col justify-content-start gap-3 py-4">
+          <p class="text-lg text-white font-semibold m-0">Sayt xaritasi</p>
+          <div class="container flex flex-col align-items-start px-0">
+            <a href="/index.html" class="text-sm font-semibold text-decoration-none text-white p-1">Bosh sahifa</a>
+            <a href="/profile.html" class="text-sm font-semibold text-decoration-none text-white p-1">Profile</a>
+            <a href="/about.html" class="text-sm font-semibold text-decoration-none text-white p-1">Biz haqimizda</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 justify-content-start align-items-center py-4">
+          <p class="text-white font-semibold m-0">Ilovani yuklab oling</p>
+          <div class="d-flex flex-column align-items-center rounded bg-white p-2">
+            <a href="" class=""><img src="./images/google-play.png" alt="" class="" width="120px"></a>
+            <a href="" class=""><img src="./images/App-Store.png" alt="" class="" width="120px"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copy bg-[#343a40] flex items-center justify-center text-white gap-3 py-3 py-sm-2 mx-0">
+        <i class="bi bi-c-circle"></i>
+        <p class="m-0 font-medium">2022 Hamroh Taxi</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/filter.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 </body>
 

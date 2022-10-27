@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hamroh Taxi</title>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg px-8 py-5 shadow-sm mb-1">
+    <div class="flex justify-between items-center md:px-8">
+      <a class="navbar-brand font-bold" href="/">HamrohTaxi</a>
+      <button class="navbar-toggler bg-indigo-900 text-white px-2 py-1 rounded" type="button">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse flex flex-col gap-3 p-4" id="navbarNav">
+        <div class="collapse-menu flex justify-between">
+          <p class="m-0 text-2xl font-semibold">Menu</p>
+          <button class="close-menu bg-indigo-900 text-white px-1 rounded  text-2xl"><i class="bi bi-x"></i></button>
+        </div>
+        <ul class="">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#"><i class="fa fa-home me-1"></i>Asosiy sahifa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-envelope me-1"></i>Xabarlar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html"><i class="fa fa-info-circle me-1"></i>Biz haqimizda</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary"><i class="fa fa-sign-in me-1"></i>Kirish</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-menu-lg">
+        <ul class="flex gap-3">
+          <li class="nav-item">
+            <a class="nav-link font-semibold opacity-70" aria-current="page" href="#"><i
+                class="fa fa-home me-1"></i>Asosiy sahifa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-semibold opacity-70" href="#"><i class="fa fa-envelope me-1"></i>Xabarlar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-semibold opacity-70" href="./about.html"><i class="fa fa-info-circle me-1"></i>Biz
+              haqimizda</a>
+          </li>
+          <li class="nav-item font-semibold">
+            <a href="/signin.html" class="btn bg-indigo-900 px-3 py-1 rounded text-white"><i class="fa fa-sign-in me-1"></i>Kirish</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="profile flex justify-center p-5">
+
+    <div class="container flex flex-col items-center">
+      <div class="inline-flex flex-col sm:flex-row justify-center items-center w-full gap-5 p-5 border-2 rounded">
+        <div>
+          <img src="/images/pf-pic.jpeg" alt="profile picture" width="54px">
+        </div>
+        <div class="flex flex-col">
+          <p class="font-semibold text-2xl">Doniyor</p>
+          <p class="text-center sm:text-start">Hamroh</p>
+        </div>
+      </div>
+      <div class="inline-flex flex-col sm:flex-row justify-center items-center w-full gap-3 mt-5 p-5 border-2 rounded">
+        <div class="inline-flex flex-col gap-3 w-full sm:w-1/2 px-4 sm:border-r-2">
+          <div class="flex justify-between">
+            <p class="text-lg font-bold border-l-4 px-2">Malumotlar</p>
+          </div>
+          <div class="flex justify-between border-b-2">
+            <p class="text-md font-semibold">Ism:</p>
+            <span class="">Doniyor</span>
+          </div>
+          <div class="flex justify-between border-b-2">
+            <p class="text-md font-semibold">Talaba:</p>
+            <span class="">Ha</span>
+          </div>
+          <div class="flex justify-between border-b-2">
+            <p class="text-md font-semibold">Mashina:</p>
+            <span class="">Yo'q</span>
+          </div>
+          <div class="flex justify-between border-b-2">
+            <p class="text-md font-semibold">Mashina turi:</p>
+            <span class="text-md">Nexia 3</span>
+          </div>
+          <div class="flex justify-between border-b-2">
+            <p class="text-md font-semibold">Raqami:</p>
+            <span class="text-md">90A999AA</span>
+          </div>
+        </div>
+        <div class="inline-flex flex-col w-full sm:w-1/2 px-4 gap-3">
+          <div class="flex justify-between">
+            <p class="text-lg font-bold border-l-4 px-2">Manzil</p>
+          </div>
+          <div class="flex justify-between border-b-2">
+            <p class="text-md font-semibold">Viloyat:</p>
+            <span class="text-md">Xorazm</span>
+          </div>
+          <div class="flex justify-between border-b-2">
+            <p class="text-md font-semibold">Tuman:</p>
+            <span class="text-md">Gurlan</span>
+          </div>
+          <div class="flex justify-between border-b-2">
+            <p class="text-md font-semibold">Telefon raqam:</p>
+            <span class="">+998905789204</span>
+          </div>
+          <button class="btn inline-block bg-indigo-900 py-2 px-5 text-white font-semibold rounded">Malumotlarni tahrirlash</button>
+        </div>
+        <!-- mashina malumotlari -->
+        <!-- <div class="flex flex-col sm:w-1/2 px-4 gap-3">
+          <div class="flex justify-between">
+            <p class="text-xl font-bold border-l-4 px-2">Mashina</p>
+          </div>
+          <div class="flex justify-between border-b-2">
+            <p class="text-md font-semibold">Mashina turi:</p>
+            <span class="text-md">Nexia 3</span>
+          </div>
+          <div class="flex justify-between border-b-2">
+            <p class="text-md font-semibold">Raqami:</p>
+            <span class="text-md">90A999AA</span>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="w-100 px-0 mx-0">
+    <div class="flex flex-col">
+      <div class="footer-links bg-slate-900 flex justify-around items-start m-0 p-5">
+        <div class="footer-soc-list flex flex-col justify-start gap-3 py-4">
+          <p class="text-lg text-white font-semibold m-0">Ijtimoiy tarmoqlar</p>
+          <div class="container flex flex-col px-0">
+            <a class="text-sm font-semibold text-decoration-none text-white p-1" href=""><i
+                class="bi bi-instagram mr-2"></i>Instagram</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-telegram mr-2"></i>Telegram</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-facebook mr-2"></i>Facebook</a>
+          </div>
+        </div>
+        <div class="footer-contact  flex flex-col justify-content-start gap-3 py-4">
+          <p class="text-lg text-white font-semibold m-0">Biz bilan bog'lanish</p>
+          <div class="container flex flex-col align-items-start px-0">
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-phone mr-2"></i>+998999999999</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-envelope mr-2"></i>hamrohtaxi@gmail.com</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1"><i
+                class="bi bi-map mr-2"></i>Xorazm, Urganch</a>
+          </div>
+        </div>
+        <div class="sitemap  flex flex-col justify-content-start gap-3 py-4">
+          <p class="text-lg text-white font-semibold m-0">Sayt xaritasi</p>
+          <div class="container container flex flex-col align-items-start px-0">
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1">Bosh sahifa</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1">Xabarlar</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1">Biz haqimizda</a>
+            <a href="" class="text-sm font-semibold text-decoration-none text-white p-1">Bining jamoa</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 justify-content-start align-items-center py-4">
+          <p class="text-white font-semibold m-0">Ilovani yuklab oling</p>
+          <div class="d-flex flex-column align-items-center rounded bg-white p-2">
+            <a href="" class=""><img src="./images/google-play.png" alt="" class="" width="120px"></a>
+            <a href="" class=""><img src="./images/App-Store.png" alt="" class="" width="120px"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copy bg-[#343a40] flex items-center justify-center text-white gap-3 py-3 py-sm-2 mx-0">
+        <i class="bi bi-c-circle"></i>
+        <p class="m-0 font-medium">2022 Hamroh Taxi</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/filter.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>
